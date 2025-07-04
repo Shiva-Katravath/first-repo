@@ -9,51 +9,130 @@
         * {
             padding: 0px;
             margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            
+        }
+
+        nav {
+            background-color: #ffffff;
+            border-bottom: #ddd;
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
         }
 
         ul {
             display: flex;
-            margin: 10px;
-            padding: 10px;
             list-style: none;
-            border: 2px solid black;
-            transition: transform 0.2s ease, color 0.2s ease;
-        }
-
-        a {
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        a:hover {
-            font-size: 20px;
-            color: brown;
-            transform: scale(1.1);
         }
 
         ul li {
-            margin: 10px;
-            text-decoration: wavy;
+            margin: 0 17px;
         }
-        #search{
-            /* background-color: aquamarine; */
-            align-items:end;
+
+        ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: transform 0.2s ease, color 0.2s ease;
         }
+
+        ul li a:hover {
+            color: orange;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #search {
+            height: 40px;
+            width: 250px;
+            padding: 0 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #search-btn {
+            height: 40px;
+            padding: 0 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2c3e50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #search-btn:hover {
+            background-color: #e67e22;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .user-info img {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
+
     </style>
 </head>
 
 <body>
-    <!-- <h1>hi shiva nayak</h1>
-    <h2>hello shiva</h2> -->
-    <div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Details</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Help</a></li>
-            <input type="search" name="search what you want" id="search">
-        </ul>
-    </div>
+    <nav>
+        <div class="logo">🏠REAL ESTATE</div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Details</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+
+            <div class="search-bar">
+                <input type="search" id="search" placeholder="search homes...">
+                <button id="search-btn">🔍</button>
+            </div>
+            <div class="user-info">
+                <img src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png" alt="Profile">
+                <span>welcome, Shiva</span>
+            </div>
+        </div>
+    </nav>
 </body>
+
 </html>
